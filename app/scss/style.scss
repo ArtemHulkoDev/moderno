@@ -58,6 +58,275 @@
   }
 }
 
+.header__circle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  position: relative;
+  &.active {
+    display: block;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px;
+    font-size: 11px;
+    color: #fff;
+  }
+}
+
+.header__box {
+  display: flex;
+  align-items: center;
+}
+
+.notification {
+  span {
+    background-color: $yellow;
+  }
+}
+
+.message {
+  span {
+    background-color: $tomato;
+  }
+}
+
+.basket {
+  span {
+    background-color: $green;
+  }
+}
+
+.header__btn-login--off {
+  display: none;
+}
+
+.header__btn-logout {
+  display: none;
+  background-color: $red;
+  margin-left: 7px;
+  &.header__btn-login--on {
+    display: block;
+  }
+}
+
+.user {
+  margin-left: 20px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+  &::after {
+    content: '\f107';
+    position: absolute;
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #707070;
+    right: 0;
+    top: 0;
+  }
+}
+
+.user__inner {
+  display: flex;
+  align-items: center;
+}
+
+.user__image {
+  margin-right: 15px;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.user__info {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.user__name {
+  color: #222;
+  @include f500;
+}
+
+.user__money {
+  color: $green;
+  @include f700;
+}
+
+.user__box, .basket__box, .notification__box, .message__box {
+  position: relative;
+  height: 90px;
+  margin-top: 40px;
+  &:hover {
+    .user__menu {
+      height: auto;
+      overflow: auto;
+      border-width: 1px;
+      padding: 20px;
+    }
+  }
+}
+
+.basket__box, .notification__box, .message__box {
+  margin-top: 54px;
+  margin-left: 15px;
+  &:hover {
+    .header__circle::before {
+      color: $bg;
+    }
+    .circle__menu {
+      height: 100%;
+      overflow: visible;
+    }
+    .circle__item {
+      padding: 23px;
+    }
+  }
+}
+
+.user__menu {
+  border: 0px solid rgb(204, 204, 204);
+  background-color: #fff;
+  position: absolute;
+  top: 69px;
+  left: 20px;
+  padding: 0 20px;
+  width: 158px;
+  transition: all .5s;
+  height: 0;
+  overflow: hidden;
+  a {
+    font-size: 12px;
+    color: $text;
+    margin-bottom: 15px;
+  }
+}
+
+.circle__menu {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  border-top: 1px solid #e0e0e0;
+  width: 269px;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.circle__item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  padding: 0 23px;
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 35px;
+    right: 28px;
+    font-size: 16px;
+    color: #b0bec5;
+  }
+}
+
+.circle__image {
+  margin-right: 15px;
+}
+
+.circle__info-name {
+  color: $bg;
+  @include f500;
+}
+
+.circle__info-theme {
+  font-size: 12px;
+  color: $green;
+}
+
+.circle__info-price {
+ @include f500;
+ color: #000;
+ font-size: 16px;
+}
+
+.circle__info-date {
+  font-size: 10px;
+  color: #707070;
+}
+
+.basket__summ {
+  padding: 16px 17px 12px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+.basket__title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-right: 22px;
+  margin-bottom: 15px;
+  @include f700;
+  color: $bg;
+  font-size: 16px;
+}
+
+.basket__btn {
+  @include f700;
+  font-size: 14px;
+  color: #fff;
+  background-color: $green;
+  padding: 12px 5px;
+  text-align: center;
+  width: 100px;
+}
+
+.basket__btn-checkout {
+  width: 123px;
+  background-color: #e85647;
+  margin-left: 6px;
+}
+
+.notification__menu,
+.message__menu {
+  .circle__image {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle__info {
+    line-height: 18px;
+  }
+}
+
+.icon-color {
+  color: $tomato;
+  &::before {
+    color: $tomato;
+  }
+}
+
 //end header
 //start search section
 
