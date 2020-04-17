@@ -334,6 +334,108 @@
 }
 
 //end header
+// start pop-up
+
+#modal {
+  background-color: $green;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.login__title {
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  @include f700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.login__wrapper {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  label {
+    position: relative;
+    display: block;
+    &::before {
+      content: '';
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 14px;
+      color: #fff;
+      left: 18px;
+      top: 9px;
+    }
+  }
+  .login__label-name::before {
+    content: '\f007';
+  }
+  .login__label-password::before {
+    content: '\f023';
+  }
+  input {
+    width: 100%;
+    height: 43px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #76ae36;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 40px;
+    display: block;
+    &::placeholder {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  button {
+    margin-top: 19px;
+    color: #000;
+    @include f700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+    padding: 18px 0 16px;
+    width: 140px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+.lost-pass {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.create-acc {
+  width: 246px;
+  text-align: center;
+  margin-top: 19px;
+  padding: 13px 0 15px 28px;
+  background-color: #76ae36;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  &::before {
+    content: '\f044';
+    position: absolute;
+    left: 35px;
+    font-family: 'icomoon';
+  }
+}
+
+.fancybox-button svg path {
+  fill: #fff;
+}
+
+
+// end pop-up
 //start search section
 
 .search {
@@ -1572,6 +1674,7 @@ button.icon-sort {
   }
 }
 
+// end product-one page
 
 
 
