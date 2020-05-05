@@ -53,7 +53,9 @@ $(function(){
       return false;
     });
 
-  $('input[type="file"], select').styler();  
+  $('input[type="file"], select').styler();
+
+  new WOW().init();
 
   var mixer = mixitup('.products__inner-box');
 
